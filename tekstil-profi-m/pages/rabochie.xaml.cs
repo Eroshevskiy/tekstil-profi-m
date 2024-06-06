@@ -51,6 +51,27 @@ namespace tekstil_profi_m.pages
 
         }
 
-        
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            var otvetDell = BDotvet.SelectedItems.Cast<Otvetstvenie>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {otvetDell.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    IEnumerable<Otvetstvenie> enumerable = dipEntitie.GetContext().Otvetstvenie.RemoveRange((IEnumerable<Otvetstvenie>)otvetDell);
+                    dipEntitie.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
+
+                    BDotvet.ItemsSource = dipEntitie.GetContext().Otvetstvenie.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+
     }
 }

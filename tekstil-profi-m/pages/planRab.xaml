@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tekstil_profi_m.pages"
         mc:Ignorable="d"
-        Title="planRab" MinHeight="650" MaxHeight="650" MinWidth="860" MaxWidth="860">
+        Title="planRab" MinHeight="650" MaxHeight="650" MinWidth="943" MaxWidth="943">
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>

@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tekstil-profi-m.exe" size="3639776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tekstil-profi-m.exe" size="3641312">
       <assemblyIdentity name="tekstil-profi-m" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3DXpZ8jsrL8jAfv7ph/zc0wK3cuyuQzJlFoYst1wCCM=</dsig:DigestValue>
+        <dsig:DigestValue>t3dlJTHWVKC1MUoBH5T+5mR92n+FL5dZN2zRVNx5A5E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -63,6 +63,34 @@ namespace tekstil_profi_m.pages
 
 
 
+
+
+
+
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            var merchDell = BDproduct.SelectedItems.Cast<Merch>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {merchDell.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    IEnumerable<Merch> enumerable = dipEntitie.GetContext().Merch.RemoveRange((IEnumerable<Merch>)merchDell);
+                    dipEntitie.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
+
+                    BDproduct.ItemsSource = dipEntitie.GetContext().Merch.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+
+
+
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
             EditMerch merch = new EditMerch((sender as Button).DataContext as Merch);
