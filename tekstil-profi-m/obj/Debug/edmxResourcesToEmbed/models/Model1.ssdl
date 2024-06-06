@@ -9,7 +9,7 @@
     <Property Name="material" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="razmer" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="color" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="photo" Type="nvarchar(max)" Nullable="false" />
     <Property Name="filePath" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Otvetstvenie">
@@ -19,7 +19,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar" MaxLength="50" />
     <Property Name="doljnost" Type="nvarchar" MaxLength="50" />
-    <Property Name="photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="Plan">
     <Key>
@@ -31,7 +31,7 @@
     <Property Name="material" Type="nvarchar" MaxLength="50" />
     <Property Name="razmer" Type="nvarchar" MaxLength="50" />
     <Property Name="color" Type="nvarchar" MaxLength="50" />
-    <Property Name="photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="nvarchar(max)" />
     <Property Name="filePath" Type="nvarchar" MaxLength="100" />
     <Property Name="id_otvetst" Type="int" />
     <Property Name="count" Type="nvarchar" MaxLength="50" />

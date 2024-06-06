@@ -26,13 +26,14 @@ namespace tekstil_profi_m.models
                 context = new dipEntitie();
             return context;
         }
+        public static Users CurrentUser { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-        public static Users CurrentUser = null;
 
+    
         public virtual DbSet<Merch> Merch { get; set; }
         public virtual DbSet<Otvetstvenie> Otvetstvenie { get; set; }
         public virtual DbSet<Plan> Plan { get; set; }
